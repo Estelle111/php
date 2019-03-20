@@ -1,0 +1,21 @@
+.container {
+    margin: 10%;
+    border: 1px solid pink;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    background-color: #e6e6fa;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    text-decoration: none;
+}
+
+#bloc {
+    margin: 10px;
+}
