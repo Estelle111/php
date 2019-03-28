@@ -15,12 +15,23 @@
                     <li><a href="#condition">Condition</a></li>
                     <li><a href="#loop">Loop</a></li>
                     <li><a href="#function">Function</a></li>
+                    <li><a href="#array">Array</a></li>
+                    <li><a href="#url_parameter">Url_parameter</a></li>
+                    <li><a href="#form">Form</a></li>
+                    <li><a href="#cookies&sessions">Cookies</a></li>
                 </ul>
             </div>
+            <a href="bonjour.php?nom=Nette&amp;prenom=Kiki&amp;repeter=">Dis-moi bonjour !</a>
+            <?php
+            ?>
             <?php require 'variable.php'?>
             <?php require 'condition.php'?>
             <?php require 'loop.php'?>
             <?php require 'function.php'?>
+            <?php require 'array.php'?>
+            <?php require 'url_parameter.php'?>
+            <?php require 'form.php'?>
+            <?php require 'cookies&sessions.php'?>
         </div>
     </body>
 </html>

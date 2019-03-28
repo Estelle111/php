@@ -77,9 +77,9 @@ foreach ($eleves as $classe => $listEleves) {
 //FUNCTIONS
 
 // var_dump()
-echo var_dump(1234).'</br>';
-echo var_dump(123.4).'</br>';
-echo var_dump('kayak').'</br>';
+echo var_dump(1234).'\n';
+echo var_dump(123.4).'\n';
+echo var_dump('kayak').'\n';
 
 //strtolower()
 //strrev()
@@ -87,9 +87,9 @@ $mot = 'kayak';
 $mot = 'Kayak';
 $reverse = strtolower(strrev($mot));
 if (strtolower($mot) === $reverse) {
-    echo "palyndrome </br>";
+    echo "palyndrome \n";
 }else {
-    echo "no palyndrome </br>";
+    echo "no palyndrome \n";
 }
 
 //array_sum ()
@@ -105,11 +105,11 @@ $notes=[10, 20, 13];
 $notes[]=16;
 $noteReversed = array_reverse($notes);
 $noteSort = sort($notes);
-print_r ($noteSort.'</br>');
+print_r ($noteSort.'\n');
 print_r ($noteReversed);
-echo '</br>'.array_push($notes, 18, 45).'</br>';
-echo var_dump($notes).'</br>';
-echo round(array_sum ($notes) / count($notes), 2).'</br>';
+echo '\n'.array_push($notes, 18, 45).'\n';
+echo var_dump($notes).'\n';
+echo round(array_sum ($notes) / count($notes), 2).'\n';
 // & de référence => relie les deux variables. 
 //Chgmts appliqués aux deux.
 $notes1=[30, 45, 13];
@@ -125,9 +125,9 @@ while(true){
     }
     $reverse = strtolower(strrev($mot));
     if(strtolower($mot)===$reverse) {
-        echo "palyndrome </br>";
+        echo "palyndrome \n";
     }else {
-        echo "no palyndrome </br>";
+        echo "no palyndrome \n";
     }
     break;
 }
@@ -142,7 +142,7 @@ foreach($insultes as $insulte){
     $replace = str_repeat('*', strlen($insulte));
     $phrase = str_replace($insulte, $replace , $phrase);
 }
-echo "$phrase </br>";
+echo "$phrase \n";
 
 //Manière différente:
 $insultes = ['merde', 'con'];
@@ -152,7 +152,7 @@ foreach($insultes as $insulte){
 }
 $phrase = 'Gros con de merde';
 $phrase = str_replace($insultes, $asterisque, $phrase);
-echo "$phrase </br>";
+echo "$phrase \n";
 
 //Premières lettres affichées:
 //substr() = retourne un segment de chaine
@@ -166,5 +166,77 @@ foreach($insultes as $insulte){
 }
 $phrase = 'Gros con de merde';
 $phrase = str_replace($insultes, $asterisque, $phrase);
-echo "$phrase </br>";
+echo "$phrase \n";
+
+
+//USER FUNCTIONS
+$nom="Nette";
+function bonjour($prenom=null, $nom=null) {
+    if($prenom===null) {
+        return "Bonjour Lovelace\n";
+    }
+    return "Bonjour $prenom $nom \n";
+}
+$salut=bonjour('Kiki', $nom);
+echo $salut;
+echo bonjour();
+
+
+//function answer_yes_no() 
+function answer_yes_no($phrase) {
+    while(true) {
+        $answer = readline($phrase." - (y)es/(n)o");
+        if($answer==='y'){
+            return true;
+        }elseif($answer==='n'){
+            return false;
+        }
+    } 
+}
+$result = answer_yes_no("Do you keep going ?");
+var_dump($result); 
+
+
+//prompt function
+/* function prompt($prompt_msg){
+    echo("<script type='text/javascript'> var answer = prompt('".$prompt_msg."'); </script>");
+    $answer = "<script type='text/javascript'> document.write(answer); </script>";
+    return($answer);
+}
+//program
+$prompt_msg = "Please type your name.";
+$name = prompt($prompt_msg);
+
+$output_msg = "Hello there ".$name."!";
+echo($output_msg); 
+*/
+
+//demander_creneau()
+function demander_creneau($phrase= 'Veuillez entrer votre creneau'){
+    echo "$phrase \n";
+    while(true) {
+        $ouverture = (int)readline('Heures d\'ouverture:');
+        if($ouverture >= 0 || $ouverture <= 23) {
+            break;
+        }
+    }
+    while(true) {
+        $fermeture = readline('Heures de fermeture:');
+        if($fermeture >= 0 && $fermeture <= 23 && $fermeture > $ouverture) {
+            break;
+        }
+    }
+    return [$ouverture, $fermeture];
+}
+$creneau1 = demander_creneau();
+$creneau2 = demander_creneau('Veuillez entrer votre creneau');
+var_dump($creneau1, $creneau2);
+
+/* function demander_creneaux($phrase= 'Veuillez entrer vos creneaux')
+$creneaux = demander_creneaux('Entrez vos creneaux')
+var_dump($creneaux);
+*/
+
+
+?> 
 
