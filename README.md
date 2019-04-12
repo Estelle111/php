@@ -11,21 +11,21 @@ Exercising with php
   * vue
 
 
-## php_exo
+## 1) php_exo
 * **Challenges**
   * Variables
   * Cookies
   * sessions
   * Url_parameter
 
-## php_tuto
+## 2) php_tuto
 * **Challenges**
   * Write php in html
   * Create a connect and disconnect button
   * Make a reserved adult section
   * Create an insults filter with st***
   
-## pizza
+## 3) pizza
 ![poster](https://github.com/Estelle111/php/blob/master/pizza/img/pizzaTemplate.png)
 * **Challenges**
   * Using Materialize framework
@@ -34,7 +34,7 @@ Exercising with php
   * Testing mysqli method for database connection
   * $_POST variable
 
-## library
+## 4) library
 * **Challenges**
   * Using the Create Read Update Delete method
   * Connect php to sql database with pdo
