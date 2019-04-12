@@ -34,9 +34,7 @@ mysqli_close($conn);
 
     <div class="container">
         <div class="row">
-
             <?php foreach($pizzas as $pizza): ?>
-
                 <div class="col s6 md3">
                     <div class="card z-depth-0">
                         <img src="img/pizza1.svg" alt="pizza" class="pizza">
@@ -53,14 +51,7 @@ mysqli_close($conn);
                         </div>
                     </div>
                 </div>
-
             <?php endforeach; ?>
-
-            <?php if(count($pizzas) >= 2): ?>
-                <p>there are 2 or more pizzas</p>
-            <?php else: ?>
-                <p>there are less then 2 pizzas</p>
-            <?php endif; ?>
 
         </div>
     </div>
