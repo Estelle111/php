@@ -1,12 +1,15 @@
 # php
-* **After 2 months and 21 days of training**
-* **Description**
-  * Exercising with php
-* **Tools**
+**After 2 months and 21 days of training**
+
+### Description
+Exercising with php
+  
+### Tools
   * materialize
   * php
   * sql
   * vue
+
 
 ## php_exo
 * **Challenges**
@@ -37,8 +40,9 @@
   * Connect php to sql database with pdo
   * Trying to link frontend and backend with api request
   
-* **During**
+ 
+### During
   * BeCode training, 2019
 
-* **Author**
+### Author
   * Estelle Mol
