@@ -9,7 +9,8 @@ $result = $pdo->query($sql);
 $rows = array();
 
 while($r = $result->fetch(PDO::FETCH_ASSOC)){
-    $rows[]=$r;
+    //$rows[]=$r;
+    array_push($rows, $r);
 }
 echo json_encode($rows);
 
