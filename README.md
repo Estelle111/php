@@ -2,7 +2,7 @@
 **After 2 months and 21 days of training**
 
 ### Description
-Exercising with php
+Familiarize with php and sql
   
 ### Tools
   * materialize
